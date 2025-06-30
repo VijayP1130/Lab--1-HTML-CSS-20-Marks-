@@ -1,122 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab Session - Navigation, Bar Graph & Form</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Lab Session</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <!-- Navigation Bar Section -->
-    <header class="header">
-        <div class="nav-container">
-            <ul class="navbar">
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Link 1</a>
+
+    <!-- NAVIGATION MENU -->
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">Link 1</a></li>
+                <li>
+                    <a href="#">Link 2</a>
+                    <ul class="dropdown">
+                        <li><a href="#">DD_Link_1</a></li>
+                        <li><a href="#">DD_Link_2</a></li>
+                        <li><a href="#">DD_Link_3</a></li>
+                    </ul>
                 </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Link 2</a>
-                    <div class="dropdown">
-                        <a href="#" class="dropdown-link">DD_Link_1</a>
-                        <a href="#" class="dropdown-link">DD_Link_2</a>
-                        <a href="#" class="dropdown-link">DD_Link_3</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Link 3</a>
-                    <div class="dropdown">
-                        <a href="#" class="dropdown-link">DD_Link_1</a>
-                        <a href="#" class="dropdown-link">DD_Link_2</a>
-                        <a href="#" class="dropdown-link">DD_Link_3</a>
-                    </div>
+                <li>
+                    <a href="#">Link 3</a>
+                    <ul class="dropdown">
+                        <li><a href="#">DD_Link_1</a></li>
+                        <li><a href="#">DD_Link_2</a></li>
+                        <li><a href="#">DD_Link_3</a></li>
+                    </ul>
                 </li>
             </ul>
-        </div>
+        </nav>
     </header>
 
-    <!-- Bar Graph Section -->
+    <!-- BAR GRAPH -->
     <section class="bar-section">
-        <div class="bar-container">
-            <div class="bar-wrapper">
-                <div class="bar bar1"></div>
-                <div class="percentage">30%</div>
-            </div>
-            <div class="bar-wrapper">
-                <div class="bar bar2"></div>
-                <div class="percentage">40%</div>
-            </div>
-            <div class="bar-wrapper">
-                <div class="bar bar3"></div>
-                <div class="percentage">80%</div>
-            </div>
+        <h1>Bar Plot</h1>
+        <div class="bar-graph">
+            <div class="bar" style="--bar-height: 30%">30%</div>
+            <div class="bar" style="--bar-height: 40%">40%</div>
+            <div class="bar" style="--bar-height: 80%">80%</div>
         </div>
-        <h1 class="bar-title">Bar Plot</h1>
     </section>
 
-    <!-- Gmail Form Section -->
+    <!-- GMAIL FORM -->
     <section class="form-section">
-        <div class="form-container">
-            <h2 class="form-title">Create Gmail Account</h2>
-            <form id="gmailForm">
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="firstName">First Name</label>
-                        <input type="text" id="firstName" name="firstName" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="lastName">Last Name</label>
-                        <input type="text" id="lastName" name="lastName" required>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="username">Username</label>
-                    <input type="text" id="username" name="username" required>
-                </div>
-
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="password">Password</label>
-                        <input type="password" id="password" name="password" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="confirmPassword">Confirm Password</label>
-                        <input type="password" id="confirmPassword" name="confirmPassword" required>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Recovery Email</label>
-                    <input type="email" id="email" name="email">
-                </div>
-
-                <div class="form-group">
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone">
-                </div>
-
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="birthDate">Birth Date</label>
-                        <input type="date" id="birthDate" name="birthDate">
-                    </div>
-                    <div class="form-group">
-                        <label for="gender">Gender</label>
-                        <select id="gender" name="gender">
-                            <option value="">Select Gender</option>
-                            <option value="male">Male</option>
-                            <option value="female">Female</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="button-group">
-                    <button type="submit" class="btn btn-submit">Submit</button>
-                    <button type="reset" class="btn btn-reset">Reset</button>
-                </div>
-            </form>
-        </div>
+        <form>
+            <h2>Create Gmail Account</h2>
+            <input type="text" placeholder="First Name" required />
+            <input type="text" placeholder="Last Name" required />
+            <input type="text" placeholder="Username" required />
+            <input type="password" placeholder="Password" required />
+            <input type="password" placeholder="Confirm Password" required />
+            <div class="form-buttons">
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
     </section>
+
 </body>
 </html>
